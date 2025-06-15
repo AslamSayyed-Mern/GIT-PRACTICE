@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .container{
+            margin: 30px;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            background-color: rgb(39, 156, 156);
+        }
+        .container>div{
+            /* position: absolute; */
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            /* top:50%;
+            left:50%;
+            transform: translate(-50%,-50%); */
+            background-color: aquamarine;
+        }
+        .item1{
+            position:absolute;
+            top: 50%;
+            left:  50%;
+            transform: translate(-50%,-50%);
+        }
+        .overflow{
+            border: 2px solid green;
+            height: 150px;
+            overflow: scroll;
+
+        }
+        .overflow>p::before{
+            content: "hey,, ";
+        }
+        .overflow>p::after{
+            content: "aslam ";
+        }
+        .overflow>p::first-line{
+            background-color: bisque;
+        }
+        .overflow>p::first-letter{
+                text-transform: capitalize;
+                font-size: x-large;
+           
+        }
+        .overflow>p::selection{
+            background-color: aquamarine;
+        }
+        .psedo-classes>div:first-of-type{
+            color: red;
+        }
+        .column-layout{
+            columns: 3;
+            column-gap: 40px;
+            /* column-rule: 2px solid green; */
+            text-align: justify;
+        }
+        @media (max-width:426px) {
+            .column-layout{
+                columns: 1;
+            }
+        }
+        @media (orientation: landscape){
+            .orientation{
+                color:rebeccapurple;
+                background-color: yellow;
+
+            }
+        }
+        @media (orientation: portrait) {
+            .orientation{
+                color: green;
+                background-color: violet;
+            }
+        }
+        .orientation>img{
+            height: 100px;
+            width: 140px;
+            border-radius: 50%;
+            float: right;
+            clip-path: circle(40%);
+            shape-outside: circle(45%);
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    screeen sizes
+    xsml-0-479px
+    sm-480px-767px
+    md-780px-1023px
+    lg-1024px-1279px
+    xl-1280px-1919px
+    2xl-1920px above -->
+    
+    <div class="container">
+        <div class="item1">item1</div>
+        <div class="item2">item2</div>
+        <div class="item3">item3</div>
+        <div class="item4">item4</div>
+        <div class="item5">item5</div>
+        
+    </div>
+    <div class="overflow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis explicabo assumenda cupiditate eligendi, officia repellat distinctio sint, illo voluptatibus itaque corrupti? Optio, tempore quae vel facilis laboriosam repudiandae unde ipsum perspiciatis perferendis totam pariatur iusto harum iure laudantium dolore quidem alias voluptatum numquam corrupti vitae, eius officia inventore est mollitia! Provident aut eveniet ducimus! Cum enim provident animi quos dolor rerum reiciendis cupiditate natus! Consequatur ad aperiam dolorum deserunt odio veritatis laboriosam, reiciendis quidem ipsum fugit harum nesciunt, tempora cumque qui! Adipisci cupiditate suscipit recusandae quod, nisi similique eius esse, ex obcaecati distinctio maiores officia id aspernatur eligendi, ipsa porro?</p>
+    </div>
+    <div class="psedo-classes">
+        <div>content1</div>
+        <div>content2</div>
+        <div>content3</div>
+        <div>content4</div>
+        <div>content5</div>
+    </div>
+    <div class="column-layout">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel nobis quisquam doloribus itaque et voluptatem quod voluptatibus asperiores consequuntur architecto eaque explicabo mollitia ad recusandae optio, similique, facilis aperiam accusamus deserunt voluptatum repellat! Incidunt voluptatum nulla iure mollitia cupiditate? Saepe magni deleniti voluptatem velit totam. Distinctio, reprehenderit error? Veritatis a sint facilis, natus aperiam nam sed voluptas delectus dolore illo? Tempore in minus officia, saepe tenetur nesciunt at eos facilis provident, quas recusandae aspernatur nostrum fuga. Dolorem, qui! Minus aut doloremque et ducimus recusandae quisquam culpa aspernatur dolor ut deserunt numquam, necessitatibus ratione unde itaque delectus omnis magni veritatis.</p>
+    </div>
+    <div class="orientation">
+        <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic provident itaque deserunt quos sint, nam accusamus rem. Modi, explicabo exercitationem! 
+             sint, nam accusamus rem. Modi, explicabo exercitationem 
+             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt unde aspernatur consequatur voluptas amet delectus natus, reprehenderit quos optio harum! Laudantium explicabo aliquid odio tempora, commodi sit temporibus voluptatum assumenda.
+        </p>
+    </div>
+</body>
+
+</html>
